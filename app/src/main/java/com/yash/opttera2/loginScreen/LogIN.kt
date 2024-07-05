@@ -1,4 +1,4 @@
-package com.yash.opttera2
+package com.yash.opttera2.loginScreen
 
 import android.graphics.Color
 import android.os.Bundle
@@ -15,6 +15,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.yash.opttera2.R
 import com.yash.opttera2.databinding.FragmentLogINBinding
 
 
@@ -72,7 +73,7 @@ class LogIN : Fragment() {
         }
 
         binding.txtLogINForgotPassword.setOnClickListener {
-      //      findNavController().navigate(R.id.action_logIn_to_forgotPassword)
+           findNavController().navigate(R.id.action_logIN_to_forgotPassword)
         }
         Log.d("TAG", "Method Started")
         binding.btnLogIn.setOnClickListener {
@@ -107,7 +108,7 @@ class LogIN : Fragment() {
                 Toast.makeText(requireContext(), "Enter the Password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             } else {
-                //     findNavController().navigate()
+                     findNavController().navigate(R.id.action_logIN_to_homeFragment)
             }
 
 
@@ -126,10 +127,12 @@ class LogIN : Fragment() {
                     // Update the input type and drawable icon based on the flag
                     if (isPasswordVisible) {
                         binding.edtLogInPassword.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                        binding.edtLogInPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.eye, 0)
+                        binding.edtLogInPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0,
+                            R.drawable.eye, 0)
                     } else {
                         binding.edtLogInPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                        binding.edtLogInPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.eye, 0)
+                        binding.edtLogInPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0,
+                            R.drawable.eye, 0)
                     }
 
                     // Move the cursor to the end of the text

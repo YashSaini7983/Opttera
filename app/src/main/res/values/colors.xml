@@ -5,4 +5,21 @@
     <color name="blue">#2081E2</color>
     <color name="grey">#9e9e9e</color>
     <color name="darkGrey">#707070</color>
+    <color name="brown">#333333</color>
+    <color name="arrow_grey">#7C7C7C</color>
+    <color name="light_grey">#EBEBEB</color>
+    <color name="grey_line">#DCDCDC</color>
+    <color name="login_line">#2D2D2D</color>
+    <color name="saveCard">#C7C3C3</color>
+    <color name="cvv">#BDBDBD</color>
+    <color name="grey6">#F2F2F2</color>
+    <color name="grey7">#828282</color>
+    <color name="head1">#2D2D2D</color>
+    <color name="customEditBoxBorder">#E0E0E0</color>
+    <color name="editTextColor">#BDBDBD</color>
+    <color name="grey1">#333333</color>
+
+    <color name="grey2">#828282</color>
+
+
 </resources>

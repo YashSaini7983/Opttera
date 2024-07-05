@@ -1,4 +1,4 @@
-package com.yash.opttera2
+package com.yash.opttera2.SignUp
 
 import android.graphics.Color
 import android.os.Bundle
@@ -13,6 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.yash.opttera2.R
 import com.yash.opttera2.databinding.FragmentSignUpConfirmBinding
 
 class SignUpConfirm : Fragment() {
@@ -111,10 +112,12 @@ class SignUpConfirm : Fragment() {
                     // Update the input type and drawable icon based on the flag
                     if (isPasswordVisible) {
                         binding.edtSignUpPassword.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                        binding.edtSignUpPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.eye, 0)
+                        binding.edtSignUpPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0,
+                            R.drawable.eye, 0)
                     } else {
                         binding.edtSignUpPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                        binding.edtSignUpPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.eye, 0)
+                        binding.edtSignUpPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0,
+                            R.drawable.eye, 0)
                     }
 
                     // Move the cursor to the end of the text
@@ -136,10 +139,12 @@ class SignUpConfirm : Fragment() {
                     // Update the input type and drawable icon based on the flag
                     if (isPasswordVisible) {
                         binding.edtSignUpPassword.inputType = InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD
-                        binding.edtSignUpPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.eye, 0)
+                        binding.edtSignUpPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0,
+                            R.drawable.eye, 0)
                     } else {
                         binding.edtSignUpConfirmPassword.inputType = InputType.TYPE_CLASS_TEXT or InputType.TYPE_TEXT_VARIATION_PASSWORD
-                        binding.edtSignUpConfirmPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0, R.drawable.eye, 0)
+                        binding.edtSignUpConfirmPassword.setCompoundDrawablesWithIntrinsicBounds(0, 0,
+                            R.drawable.eye, 0)
                     }
 
                     // Move the cursor to the end of the text

@@ -25,16 +25,22 @@
     </fragment>
     <fragment
         android:id="@+id/logIN"
-        android:name="com.yash.opttera2.LogIN"
+        android:name="com.yash.opttera2.loginScreen.LogIN"
         android:label="fragment_log_i_n"
         tools:layout="@layout/fragment_log_i_n" >
         <action
             android:id="@+id/action_logIN_to_signUp"
             app:destination="@id/signUp" />
+        <action
+            android:id="@+id/action_logIN_to_forgotPassword"
+            app:destination="@id/forgotPassword" />
+        <action
+            android:id="@+id/action_logIN_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/signUp"
-        android:name="com.yash.opttera2.SignUp"
+        android:name="com.yash.opttera2.SignUp.SignUp"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -46,22 +52,55 @@
     </fragment>
     <fragment
         android:id="@+id/signUpConfirm"
-        android:name="com.yash.opttera2.SignUpConfirm"
+        android:name="com.yash.opttera2.SignUp.SignUpConfirm"
         android:label="fragment_sign_up_confirm"
         tools:layout="@layout/fragment_sign_up_confirm" >
-        <action
-            android:id="@+id/action_signUpConfirm_to_logIN"
-            app:destination="@id/logIN" />
+
         <action
             android:id="@+id/action_signUpConfirm_to_signUp"
             app:destination="@id/signUp" />
         <action
             android:id="@+id/action_signUpConfirm_to_logIN2"
             app:destination="@id/logIN" />
+        <action
+            android:id="@+id/action_signUpConfirm_to_logIN"
+            app:destination="@id/logIN" />
     </fragment>
     <fragment
         android:id="@+id/forgotPassword"
-        android:name="com.yash.opttera2.ForgotPassword"
+        android:name="com.yash.opttera2.loginScreen.ForgotPassword"
         android:label="fragment_forgot_password"
-        tools:layout="@layout/fragment_forgot_password" />
+        tools:layout="@layout/fragment_forgot_password" >
+        <action
+            android:id="@+id/action_forgotPassword_to_otpVerification"
+            app:destination="@id/otpVerification" />
+    </fragment>
+    <fragment
+        android:id="@+id/otpVerification"
+        android:name="com.yash.opttera2.loginScreen.OtpVerification"
+        android:label="fragment_otp_verification"
+        tools:layout="@layout/fragment_otp_verification" >
+        <action
+            android:id="@+id/action_otpVerification_to_resetPassword"
+            app:destination="@id/resetPassword" />
+    </fragment>
+    <fragment
+        android:id="@+id/resetPassword"
+        android:name="com.yash.opttera2.loginScreen.ResetPassword"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" >
+        <action
+            android:id="@+id/action_resetPassword_to_logIN"
+            app:destination="@id/logIN" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.yash.opttera2.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.yash.opttera2.Profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>

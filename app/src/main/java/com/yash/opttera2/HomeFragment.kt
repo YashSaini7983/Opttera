@@ -5,55 +5,152 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.navigation.NavigationView
+import com.yash.opttera2.Profile.ProfileFragment
+import com.yash.opttera2.databinding.FragmentHomeBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+     private lateinit var binding : FragmentHomeBinding
+    private lateinit var navView: NavigationView
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        binding = FragmentHomeBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        val toolbar = binding.toolbar
+        val drawerLayout = binding.drawerLayout
+        val navigationView = binding.navigationView
+        val headerView = navigationView.getHeaderView(0)
+        val headerTitle = headerView.findViewById<TextView>(R.id.header_title)
+
+
+
+
+
+
+
+        (activity as? AppCompatActivity)?.let {
+            it.setSupportActionBar(toolbar)
+            val toggle = ActionBarDrawerToggle(
+                it, drawerLayout, toolbar,
+                R.string.navigation_drawer_open, R.string.navigation_drawer_close
+            )
+            drawerLayout.addDrawerListener(toggle)
+            toggle.syncState()
+        }
+            drawerLayout.closeDrawers()
+            true
+
+/**
+
+        headerView.setOnClickListener {
+            headerTitle.text = getString(R.string.main_header_title) // Set to your main header title
+            navigationView.menu.clear()
+            navigationView.inflateMenu(R.menu.nav_menu) // Set to your main menu resource
+        }
+
+
+
+        navigationView.setNavigationItemSelectedListener {
+                menuItem ->
+            // Handle navigation view item clicks here.
+            when (menuItem.itemId) {
+                R.id.nav_myAccount -> {
+                    // Replace the header with "My Account"
+                    headerTitle.text = "My Account"
+                    navigationView.menu.clear()
+                    navigationView.inflateMenu(R.menu.nav_menu_myaccount)
+                    true
                 }
+                R.id.nav_personaldetail -> {
+                    // Replace the current fragment with the PersonalDetail fragment
+                    val personalDetailFragment = PersonalDetail()
+                    requireActivity().supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, personalDetailFragment)
+                        .addToBackStack(null)
+                        .commit()
+                    true
+
+                }
+                R.id.nav_referral->
+                {
+                    val referralFragment  = Refrealfragment()
+                    requireActivity().supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, referralFragment)
+                        .addToBackStack(null)
+                        .commit()
+                    true
+
+                }
+                R.id.nav_loyaltyCards->
+                {
+                    val loyaltyCardFragment  = LoyaltyCard()
+                    requireActivity().supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment_container, loyaltyCardFragment)
+                        .addToBackStack(null)
+                        .commit()
+                    true
+                }
+
+                R.id.nav_HelpCentre -> {
+                    // Handle Help Centre click
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    true
+                }
+
+                R.id.privacyPolicy -> {
+                    // Handle Privacy Policy click
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    true
+                }
+
+                R.id.nav_logout -> {
+                    // Handle Log Out click
+                    drawerLayout.closeDrawer(GravityCompat.START)
+                    true
+                }
+
+                else -> false
             }
+        }
+
+        **/
+
+        toolbar.setNavigationOnClickListener {
+            val profileFragment = ProfileFragment()
+            requireActivity().supportFragmentManager.beginTransaction()
+                .replace(R.id.drawer_fragment_container, profileFragment)
+                .addToBackStack(null)
+                .commit()
+        }
+
+
+
+
+
+
+
     }
+
+
+
+
+
 }
+

@@ -1,4 +1,4 @@
-package com.yash.opttera2
+package com.yash.opttera2.SignUp
 
 import android.graphics.Color
 import android.os.Bundle
@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.yash.opttera2.R
 import com.yash.opttera2.databinding.FragmentSignUpBinding
 
 private lateinit var binding : FragmentSignUpBinding

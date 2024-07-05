@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Profile.Account.MyVehicle.AddCarDetailFragment">
+
+
+    <LinearLayout
+        android:id="@+id/addCard_Header"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/baseline_arrow_back_ios_24" />
+
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="Vehicle Details"
+            android:textAppearance="@style/profile_heading" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="52dp"
+        android:background="@color/grey_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/carDetailHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        android:background="@drawable/custom_edit_box"
+        app:cardElevation="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/detail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view1"
+        app:layout_constraintVertical_bias="0.067">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+
+            <ImageView
+                android:id="@+id/imgCar"
+                android:layout_width="99dp"
+                android:layout_height="60dp"
+                android:src="@drawable/bmw"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.02"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.49" />
+
+            <LinearLayout
+                android:id="@+id/carInformation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgCar"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="25dp">
+
+                <TextView
+                    android:id="@+id/txtCarName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="BMW"
+                    android:textAppearance="@style/Vechile"
+                    android:lineHeight="21.78dp"/>
+
+
+                <TextView
+                    android:id="@+id/txtCarDetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="i3s 94 Ah (2017 - 2018)"
+                    android:lineHeight="15dp"
+                    android:textAppearance="@style/Vechile1"
+                    android:padding="5dp"/>
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+<androidx.cardview.widget.CardView
+    android:id="@+id/detail"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="4dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:background="@drawable/custom_edit_box"
+    app:cardElevation="0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/carDetailHeader">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Performance"
+            android:textAppearance="@style/carDetail"
+            android:lineHeight="20dp"
+            android:paddingLeft="20dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Acceleration 0-100km/h"
+            android:layout_weight="1"
+            android:paddingLeft="20dp"
+            android:lineHeight="20dp"
+            android:textAppearance="@style/carDetail1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="7 sec"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Top Speed"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/carDetail1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="155km/h"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Power"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/carDetail1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="114 kW"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Torque"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/carDetail1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="235 Nm"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Drive"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/carDetail1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Front"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="35dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Range"
+            android:textAppearance="@style/carDetail"
+            android:lineHeight="20dp"
+            android:paddingLeft="20dp"/>
+    </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Opttera calculates its own real range values based on actual driving data."
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="20dp"
+                android:textAppearance="@style/carDetail1"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="15dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Situations"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts2"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Mild 23°"
+                android:textAppearance="@style/fonts2"
+                android:gravity="center"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Cold 10°"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts2" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="City"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts2"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="345 km"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1"
+                android:gravity="center"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="225 km"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Highway"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts2"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="345 km"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1"
+                android:gravity="center"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="225 km"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Combined"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts2"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="345 km"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1"
+                android:gravity="center"
+                android:layout_weight="1"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="225 km"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="35dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="General"
+                android:textAppearance="@style/carDetail"
+                android:lineHeight="20dp"
+                android:paddingLeft="20dp"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CT Real Range"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="20dp"
+                android:textAppearance="@style/carDetail1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="204 - 238 km"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WLTP Range"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="20dp"
+                android:textAppearance="@style/carDetail1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="255 km"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Usable Battery"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="20dp"
+                android:textAppearance="@style/carDetail1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="37.8 kWh"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Efficiency"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="20dp"
+                android:textAppearance="@style/carDetail1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="16.8 kWh/100 km"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plug Type"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:lineHeight="20dp"
+                android:textAppearance="@style/carDetail1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type 2, CCS 2"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:lineHeight="17dp"
+                android:textAppearance="@style/fonts1" />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+  </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

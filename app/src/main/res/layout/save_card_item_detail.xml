@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="131dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_margin="8dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="41dp"
+                android:layout_height="32dp"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/logos_mastercard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.055"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.282" />
+
+            <TextView
+
+                android:id="@+id/masterCard"
+                android:layout_width="match_parent"
+                android:layout_height="27dp"
+                android:layout_marginLeft="89dp"
+                android:text="Master Card *0011"
+                android:textAppearance="@style/save_card"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.096"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.269" />
+
+
+            <TextView
+                android:id="@+id/expireDate"
+                android:layout_width="match_parent"
+                android:layout_height="22dp"
+                android:layout_marginBottom="44dp"
+                android:layout_marginLeft="89dp"
+                android:gravity="start"
+                android:lineHeight="24dp"
+                android:text="Expires 05/25"
+                android:textAppearance="@style/save_card_expire"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/masterCard"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/primaryCard"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:gravity="start"
+                android:layout_marginLeft="89dp"
+                android:lineHeight="21dp"
+                android:text="Primary Card"
+                android:textAppearance="@style/primary_Card"
+                android:textColor="@color/blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.38"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/expireDate"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="19dp"
+                android:lineHeight="21px"
+                android:layout_marginLeft="89dp"
+                android:text="Edit"
+                android:gravity="start"
+                android:textAppearance="@style/primary_Card"
+                android:textColor="@color/blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.361"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/primaryCard"
+                app:layout_constraintVertical_bias="0.25" />
+
+            <TextView
+                android:layout_width="114dp"
+                android:layout_height="18dp"
+                android:gravity="start"
+                android:lineHeight="21px"
+                android:text="Delete"
+                android:textAppearance="@style/primary_Card"
+                android:textColor="@color/blue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/primaryCard"
+                app:layout_constraintVertical_bias="0.312" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

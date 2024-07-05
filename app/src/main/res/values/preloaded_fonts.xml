@@ -2,7 +2,130 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/inter</item>
+        <item>@font/inter_medium</item>
+        <item>@font/inter_semibold</item>
         <item>@font/poppins</item>
         <item>@font/poppins_light</item>
+        <item>@font/poppins_medium</item>
+        <item>@font/poppins_semibold</item>
     </array>
+
+
+    <style name="profile_items">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="fonts1">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
+    <style name="profile_heading">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
+    <style name="save_card">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <style name="save_card_expire">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
+    <style name="primary_Card">
+        <item name="fontFamily">@font/poppins_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
+    <style name="fonts">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
+    <style name="energy_wallet">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
+    <style name="energy_wallet_description">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+
+    <style name="carDetail">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+
+    <style name="refferal">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#282828</item>
+    </style>
+
+
+    <style name="refferal1">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textColor">#828282</item>
+    </style>
+
+    <style name="Invite">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#282828</item>
+    </style>
+
+
+
+    <style name="Vechile">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/grey1</item>
+    </style>
+
+    <style name="Vechile1">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
+    <style name="carDetail1">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/grey2</item>
+    </style>
+
+    <style name="fonts2">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#828282</item>
+    </style>
+
+
+
+
 </resources>

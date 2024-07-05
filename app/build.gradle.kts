@@ -68,6 +68,8 @@ dependencies {
     // country code Picker
     implementation("com.hbb20:ccp:2.6.0")
     implementation("com.googlecode.libphonenumber:libphonenumber:8.12.34")
+    //BarCode
+    implementation("com.journeyapps:zxing-android-embedded:4.2.0")
 
 
 

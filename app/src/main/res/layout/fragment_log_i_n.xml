@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LogIN"
+    tools:context=".loginScreen.LogIN"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-
 
 
     <com.google.android.material.textview.MaterialTextView
@@ -19,7 +18,7 @@
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.521"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.087" />
@@ -72,14 +71,14 @@
         <EditText
             android:id="@+id/edt_LogIn_Email_Phone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:hint="  Enter Email/Phone *"
             android:inputType="text"
             android:layout_marginLeft="16dp"
             android:layout_marginRight="16dp"
             android:textColor="@color/black"
             app:boxStrokeColor="@color/grey"
-            app:hintTextColor="@color/grey"
+            android:textColorHint="@color/grey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.271"
@@ -91,12 +90,13 @@
     <EditText
         android:id="@+id/edt_LogIn_Password"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:hint="  Password *"
         android:inputType="textPassword|text"
         android:drawableEnd="@drawable/eye"
         app:boxStrokeColor="@color/grey"
-        app:hintTextColor="@color/grey"
+        android:padding="12dp"
+        android:textColorHint="@color/grey"
         android:textColor="@color/black"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -130,6 +130,7 @@
         android:textAlignment="center"
         android:textColor="@color/blue"
         android:textSize="14sp"
+        android:textAppearance="@style/fonts1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.931"
@@ -158,6 +159,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="or continue with"
+        android:textAppearance="@style/fonts1"
         android:textColor="@color/darkGrey"
         android:textSize="14sp"
         app:fontFamily="@font/poppins"
@@ -172,33 +174,90 @@
         android:id="@+id/materialTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="4dp"
         android:text="Not registered yet?"
+        android:textAppearance="@style/fonts"
         android:textColor="@color/darkGrey"
+        app:layout_constraintEnd_toStartOf="@+id/txt_signup"
         android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@+id/logo_container"
+        app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.457"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.942" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txt_signup"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_light"
         android:text="Sign up"
+        android:textAppearance="@style/fonts"
         android:textColor="@color/blue"
         android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.754"
+
+        app:layout_constraintStart_toEndOf="@+id/materialTextView"
+        app:layout_constraintTop_toTopOf="@+id/materialTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logo_container"
+        android:layout_width="236dp"
+        android:layout_height="50dp"
+        android:foregroundGravity="center"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp"
+
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.768"
+        app:layout_constraintHorizontal_bias="0.537"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.943" />
+        app:layout_constraintVertical_bias="0.857">
 
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/google"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/google_logo" />
+
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/facebook_logo" />
+
+
+            <ImageView
+                android:id="@+id/linkedIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/linkedin_logo" />
+
+
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/twitter_logo" />
+
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

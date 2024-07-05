@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Profile.Account.Refreral.Refrealfragment"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+
+    <LinearLayout
+        android:id="@+id/ReferralHeader"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="start|center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="12dp"
+            android:src="@drawable/baseline_arrow_back_ios_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:gravity="center"
+            android:text="Refreral"
+            android:textAppearance="@style/profile_heading" />
+
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="52dp"
+        android:background="@color/grey_line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txtheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:fontFamily="@font/inter"
+        android:lineHeight="22dp"
+        android:text="Invite your friends to Opttera.If they sign up , you and your friend will 200 points"
+        android:textColor="@color/head1"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ReferralHeader"
+        app:layout_constraintVertical_bias="0.028" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardInvitation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginLeft="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtheader"
+        app:layout_constraintVertical_bias="0.189">
+        
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+
+           <ImageView
+               android:id="@+id/chatIcon"
+               android:layout_width="48dp"
+               android:layout_height="48dp"
+               android:layout_marginTop="12dp"
+               android:src="@drawable/chat_icon"
+
+               app:layout_constraintHorizontal_chainStyle="spread"
+               android:layout_marginStart="16dp"
+               app:layout_constraintEnd_toStartOf="@+id/msIcon"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent" />
+
+<!--
+           <ImageView
+               android:layout_width="74dp"
+               android:layout_height="0dp"
+               android:src="@drawable/vector"
+               app:layout_constraintEnd_toEndOf="@+id/msIcon"
+               app:layout_constraintStart_toStartOf="@+id/chatIcon"
+               app:layout_constraintTop_toTopOf="@+id/chatIcon"
+               app:layout_constraintBottom_toBottomOf="@+id/msIcon"/>
+-->
+           <ImageView
+               android:id="@+id/msIcon"
+               android:layout_width="48dp"
+               android:layout_height="48dp"
+
+               android:layout_marginStart="88dp"
+
+               android:layout_marginTop="12dp"
+               android:src="@drawable/ms_icon"
+               app:layout_constraintEnd_toStartOf="@+id/drive_icon"
+               app:layout_constraintStart_toEndOf="@+id/chatIcon"
+               app:layout_constraintTop_toTopOf="parent" />
+
+
+           <ImageView
+               android:id="@+id/drive_icon"
+               android:layout_width="48dp"
+               android:layout_height="48dp"
+
+               android:layout_marginStart="116dp"
+               android:layout_marginTop="16dp"
+               android:src="@drawable/driving_icon"
+               app:layout_constraintStart_toEndOf="@+id/msIcon"
+               app:layout_constraintTop_toTopOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"/>
+
+           <TextView
+               android:id="@+id/SendInvitation"
+
+               android:layout_width="wrap_content"
+
+                android:layout_height="15dp"
+               android:lineHeight="15dp"
+               android:text="Send Invitation"
+               android:textAppearance="@style/refferal"
+               app:layout_constraintEnd_toEndOf="@+id/chatIcon"
+               app:layout_constraintStart_toStartOf="@+id/chatIcon"
+               app:layout_constraintTop_toBottomOf="@+id/chatIcon"
+               android:layout_marginTop="16dp"/>
+
+           <TextView
+               android:id="@+id/register"
+               android:layout_width="77dp"
+               android:layout_height="15dp"
+
+               android:gravity="center"
+
+               android:layout_marginTop="16dp"
+               android:lineHeight="15dp"
+               android:text="Register"
+               android:textAppearance="@style/refferal"
+               app:layout_constraintEnd_toEndOf="@+id/msIcon"
+               app:layout_constraintStart_toStartOf="@+id/msIcon"
+               app:layout_constraintTop_toBottomOf="@+id/msIcon" />
+
+           <TextView
+               android:id="@+id/drive"
+               android:layout_width="77dp"
+               android:layout_height="15dp"
+               android:layout_marginTop="16dp"
+               android:gravity="center"
+
+               android:fontFamily="@font/poppins_semibold"
+               android:lineHeight="15dp"
+               android:text="Drive for free"
+               android:textAppearance="@style/refferal"
+               app:layout_constraintEnd_toEndOf="@+id/drive_icon"
+               app:layout_constraintStart_toStartOf="@+id/drive_icon"
+               app:layout_constraintTop_toBottomOf="@+id/drive_icon" />
+
+
+           <TextView
+               android:id="@+id/txtInvitation"
+               android:layout_width="0dp"
+               android:textAlignment="center"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="12dp"
+               android:textAppearance="@style/refferal1"
+               android:text="Send Invite to your friends"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintTop_toBottomOf="@+id/SendInvitation"
+               app:layout_constraintStart_toStartOf="@+id/SendInvitation"
+               app:layout_constraintEnd_toEndOf="@+id/SendInvitation"/>
+
+           <TextView
+               android:id="@+id/txtRegister"
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:textAppearance="@style/refferal1"
+               android:gravity="center"
+
+               android:lineHeight="15dp"
+               android:text="Let them register using your referral link"
+               android:layout_marginBottom="12dp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintStart_toStartOf="@+id/register"
+               app:layout_constraintEnd_toEndOf="@+id/register"
+               app:layout_constraintTop_toBottomOf="@+id/register"
+               />
+
+
+           <TextView
+               android:layout_width="0dp"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="12dp"
+               android:lineHeight="15dp"
+               android:gravity="center"
+
+               android:textAppearance="@style/refferal1"
+               android:text="You and your friends will get 200 points"
+               app:layout_constraintBottom_toBottomOf="parent"
+              app:layout_constraintStart_toStartOf="@+id/drive"
+               app:layout_constraintEnd_toEndOf="@+id/drive"
+               app:layout_constraintTop_toBottomOf="@+id/drive"
+               app:layout_constraintVertical_bias="0.461" />
+
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardEmailInvitation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="18dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardInvitation"
+        app:layout_constraintVertical_bias="0.426">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background='@color/white'>
+
+
+            <TextView
+                android:id="@+id/txtInviteFriend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineHeight="24dp"
+                android:paddingLeft="15dp"
+                android:text="Invite Your Friend"
+                android:textAppearance="@style/Invite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.049"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.171" />
+
+            <TextView
+                android:id="@+id/txtBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:paddingLeft="16dp"
+                android:lineHeight="22dp"
+                android:text="Add your friend email and send them invitations to join opptera "
+                 android:fontFamily="@font/inter"
+                android:textColor="@color/head1"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/txtInviteFriend"
+                app:layout_constraintHorizontal_bias="0.305"
+                app:layout_constraintStart_toStartOf="@+id/txtInviteFriend"
+                app:layout_constraintTop_toBottomOf="@+id/txtInviteFriend" />
+
+            <EditText
+                android:id="@+id/edtRefreral"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:drawableEnd="@drawable/telegram_logo"
+                android:ems="10"
+
+                android:paddingLeft="16dp"
+
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="15dp"
+                android:hint="Email Address "
+                android:inputType="text"
+                android:fontFamily="@font/inter"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:background="@drawable/custom_edit_box"
+                android:textColorHint="@color/editTextColor"
+
+                android:padding="12dp"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtBox"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/txtBox"
+                app:layout_constraintTop_toBottomOf="@id/txtBox"
+                app:layout_constraintVertical_bias="0.6" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardShared"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="18dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="0dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardEmailInvitation"
+        app:layout_constraintVertical_bias="0.718">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/txtSharedLink"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lineHeight="24dp"
+                android:paddingLeft="15dp"
+                android:text="Share the referral link"
+                android:textAppearance="@style/Invite"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.023" />
+
+
+            <TextView
+                android:id="@+id/txtSharedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="@font/inter"
+                android:lineHeight="22dp"
+                android:paddingLeft="16dp"
+                android:text="Share the link with your friends to earn credit 200 points"
+                android:textColor="@color/head1"
+                app:layout_constraintEnd_toEndOf="@+id/txtSharedLink"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="@+id/txtSharedLink"
+                app:layout_constraintTop_toBottomOf="@+id/txtSharedLink" />
+
+            <EditText
+                android:id="@+id/edtRefferalMail"
+                android:layout_width="match_parent"
+                android:background="@drawable/custom_edit_box"
+                android:layout_height="36dp"
+                android:paddingLeft="15dp"
+                android:layout_marginRight="130dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="15dp"
+                android:ems="10"
+                android:hint="abc@gmail.com "
+                android:inputType="text"
+                android:fontFamily="@font/inter"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                app:boxStrokeColor="@color/grey"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/txtSharedBox"
+                app:layout_constraintHorizontal_bias="0.331"
+                app:layout_constraintStart_toStartOf="@+id/txtSharedBox"
+                app:layout_constraintTop_toBottomOf="@+id/txtSharedBox"
+                app:layout_constraintVertical_bias="0.873" />
+
+            <ImageView
+                android:id="@+id/circleFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="12dp"
+                android:src="@drawable/circle_facebook_logo"
+
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/edtRefferalMail"
+                app:layout_constraintTop_toBottomOf="@+id/txtSharedBox"
+                app:layout_constraintVertical_bias="0.416" />
+
+            <ImageView
+                android:id="@+id/circleTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/circle_twitter_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/circleFacebook"
+                app:layout_constraintTop_toBottomOf="@+id/txtSharedBox"
+                app:layout_constraintVertical_bias="0.416" />
+
+            <ImageView
+                android:id="@+id/circleLinkedIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/circle_linked_logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.407"
+                app:layout_constraintStart_toEndOf="@+id/circleTwitter"
+                app:layout_constraintTop_toBottomOf="@+id/txtSharedBox"
+                app:layout_constraintVertical_bias="0.416" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
