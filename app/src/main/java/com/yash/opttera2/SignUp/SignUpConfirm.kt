@@ -94,7 +94,7 @@ class SignUpConfirm : Fragment() {
             }
             if(password.equals(confirmPassword))
             {
-                //  findNavController().navigate()
+                findNavController().navigate(R.id.action_signUpConfirm_to_logInVechileDetailFragment)
             }
         }
 

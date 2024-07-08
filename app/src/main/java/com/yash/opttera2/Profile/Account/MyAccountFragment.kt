@@ -5,10 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-<<<<<<< HEAD
 import com.yash.opttera2.Profile.Account.MyVehicle.MyVehicle
-=======
->>>>>>> origin/main
+
 import com.yash.opttera2.Profile.Account.Persondetail.PersonalDetail
 import com.yash.opttera2.Profile.ProfileFragment
 import com.yash.opttera2.R
@@ -67,8 +65,6 @@ class MyAccountFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-
-<<<<<<< HEAD
         binding.vechileDetails.setOnClickListener {
             val MyVehicleDetails = MyVehicle()
             requireActivity().supportFragmentManager.beginTransaction()
@@ -76,8 +72,7 @@ class MyAccountFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-=======
->>>>>>> origin/main
+
 
 
 

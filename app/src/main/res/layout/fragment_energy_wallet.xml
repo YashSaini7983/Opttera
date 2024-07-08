@@ -37,12 +37,12 @@
             android:id="@+id/energyWallet"
             android:layout_width="match_parent"
             android:layout_height="39dp"
-            android:fontFamily="@font/inter"
+            android:fontFamily="@font/inter_semibold"
+            android:lineHeight="24dp"
             android:gravity="center"
             android:text="Energy Wallet "
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="20sp" />
 
         <TextView
             android:id="@+id/textonBoarding3"
@@ -54,7 +54,8 @@
             android:text="Transforming the Way you Navigate,Charge,and Manage Energy"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:lineHeight="29dp"/>
 
 
     </androidx.cardview.widget.CardView>

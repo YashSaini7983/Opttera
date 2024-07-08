@@ -65,6 +65,9 @@
         <action
             android:id="@+id/action_signUpConfirm_to_logIN"
             app:destination="@id/logIN" />
+        <action
+            android:id="@+id/action_signUpConfirm_to_logInVechileDetailFragment"
+            app:destination="@id/logInVechileDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/forgotPassword"
@@ -103,4 +106,16 @@
         android:name="com.yash.opttera2.Profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/logInVechileDetailFragment"
+        android:name="com.yash.opttera2.LogInVechileDetailFragment"
+        android:label="fragment_log_in_vechile_detail"
+        tools:layout="@layout/fragment_log_in_vechile_detail" >
+        <action
+            android:id="@+id/action_logInVechileDetailFragment_to_signUpConfirm"
+            app:destination="@id/signUpConfirm" />
+        <action
+            android:id="@+id/action_logInVechileDetailFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 </navigation>

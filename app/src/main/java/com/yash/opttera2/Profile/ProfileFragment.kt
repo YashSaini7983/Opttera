@@ -79,12 +79,7 @@ class ProfileFragment : Fragment() {
 
 
 
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> origin/main
     }
 
 }

@@ -18,6 +18,8 @@
     <color name="customEditBoxBorder">#E0E0E0</color>
     <color name="editTextColor">#BDBDBD</color>
     <color name="grey1">#333333</color>
+    <color name="LogInScreen">#707070</color>
+    <color name="Spinner">#4F4F4F</color>
 
     <color name="grey2">#828282</color>
 

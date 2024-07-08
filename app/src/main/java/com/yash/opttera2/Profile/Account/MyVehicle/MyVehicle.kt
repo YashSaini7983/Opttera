@@ -5,13 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-<<<<<<< HEAD
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.yash.opttera2.Profile.Account.SaveCard.AddCardFragment
 import com.yash.opttera2.Profile.Account.SaveCard.SaveCardData
-=======
->>>>>>> origin/main
+
 import com.yash.opttera2.R
 import com.yash.opttera2.databinding.FragmentMyVehicleBinding
 
@@ -33,7 +31,7 @@ class MyVehicle : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
 
-<<<<<<< HEAD
+
         val recyclerView: RecyclerView = binding.savedCarRecyclerView
         val linearLayoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL,false)
         recyclerView.layoutManager = linearLayoutManager
@@ -53,8 +51,7 @@ class MyVehicle : Fragment() {
         }
 
         recyclerView.adapter = adapter
-=======
->>>>>>> origin/main
+
 
 
 
@@ -62,10 +59,9 @@ class MyVehicle : Fragment() {
 
 
 
-<<<<<<< HEAD
 
 
 
-=======
->>>>>>> origin/main
+
+
 }

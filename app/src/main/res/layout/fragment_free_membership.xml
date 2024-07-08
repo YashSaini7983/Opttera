@@ -38,12 +38,12 @@
             android:id="@+id/freeMembership"
             android:layout_width="match_parent"
             android:layout_height="39dp"
-            android:fontFamily="@font/inter"
+            android:fontFamily="@font/inter_semibold"
+            android:lineHeight="24dp"
             android:gravity="center"
             android:text="Free Membership"
             android:textColor="@color/black"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="20sp" />
 
 
         <TextView
@@ -56,7 +56,8 @@
             android:text="Get FREE plus Loyalty card-saving and collection energy usage point at over 899007 charging stations."
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:textSize="18sp"
+            android:lineHeight="25dp"/>
 
 
     </androidx.cardview.widget.CardView>

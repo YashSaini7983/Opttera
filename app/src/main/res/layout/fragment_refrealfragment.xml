@@ -116,9 +116,7 @@
                android:id="@+id/msIcon"
                android:layout_width="48dp"
                android:layout_height="48dp"
-
                android:layout_marginStart="88dp"
-
                android:layout_marginTop="12dp"
                android:src="@drawable/ms_icon"
                app:layout_constraintEnd_toStartOf="@+id/drive_icon"
@@ -130,7 +128,6 @@
                android:id="@+id/drive_icon"
                android:layout_width="48dp"
                android:layout_height="48dp"
-
                android:layout_marginStart="116dp"
                android:layout_marginTop="16dp"
                android:src="@drawable/driving_icon"
@@ -140,10 +137,8 @@
 
            <TextView
                android:id="@+id/SendInvitation"
-
                android:layout_width="wrap_content"
-
-                android:layout_height="15dp"
+               android:layout_height="15dp"
                android:lineHeight="15dp"
                android:text="Send Invitation"
                android:textAppearance="@style/refferal"
@@ -154,11 +149,9 @@
 
            <TextView
                android:id="@+id/register"
-               android:layout_width="77dp"
+               android:layout_width="wrap_content"
                android:layout_height="15dp"
-
                android:gravity="center"
-
                android:layout_marginTop="16dp"
                android:lineHeight="15dp"
                android:text="Register"
@@ -169,11 +162,10 @@
 
            <TextView
                android:id="@+id/drive"
-               android:layout_width="77dp"
+               android:layout_width="wrap_content"
                android:layout_height="15dp"
                android:layout_marginTop="16dp"
                android:gravity="center"
-
                android:fontFamily="@font/poppins_semibold"
                android:lineHeight="15dp"
                android:text="Drive for free"
@@ -186,15 +178,18 @@
            <TextView
                android:id="@+id/txtInvitation"
                android:layout_width="0dp"
-               android:textAlignment="center"
                android:layout_height="wrap_content"
                android:layout_marginBottom="12dp"
-               android:textAppearance="@style/refferal1"
                android:text="Send Invite to your friends"
+                android:gravity="center"
+               android:lineHeight="15dp"
+               android:textAppearance="@style/refferal1"
                app:layout_constraintBottom_toBottomOf="parent"
-               app:layout_constraintTop_toBottomOf="@+id/SendInvitation"
+               app:layout_constraintEnd_toEndOf="@+id/SendInvitation"
+               app:layout_constraintHorizontal_bias="0.0"
                app:layout_constraintStart_toStartOf="@+id/SendInvitation"
-               app:layout_constraintEnd_toEndOf="@+id/SendInvitation"/>
+               app:layout_constraintTop_toBottomOf="@+id/SendInvitation"
+               app:layout_constraintVertical_bias="0.481" />
 
            <TextView
                android:id="@+id/txtRegister"
@@ -202,7 +197,6 @@
                android:layout_height="wrap_content"
                android:textAppearance="@style/refferal1"
                android:gravity="center"
-
                android:lineHeight="15dp"
                android:text="Let them register using your referral link"
                android:layout_marginBottom="12dp"
@@ -219,11 +213,10 @@
                android:layout_marginBottom="12dp"
                android:lineHeight="15dp"
                android:gravity="center"
-
                android:textAppearance="@style/refferal1"
                android:text="You and your friends will get 200 points"
                app:layout_constraintBottom_toBottomOf="parent"
-              app:layout_constraintStart_toStartOf="@+id/drive"
+               app:layout_constraintStart_toStartOf="@+id/drive"
                app:layout_constraintEnd_toEndOf="@+id/drive"
                app:layout_constraintTop_toBottomOf="@+id/drive"
                app:layout_constraintVertical_bias="0.461" />
