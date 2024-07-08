@@ -108,7 +108,7 @@
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/logInVechileDetailFragment"
-        android:name="com.yash.opttera2.LogInVechileDetailFragment"
+        android:name="com.yash.opttera2.SignUp.LogInVechileDetailFragment"
         android:label="fragment_log_in_vechile_detail"
         tools:layout="@layout/fragment_log_in_vechile_detail" >
         <action

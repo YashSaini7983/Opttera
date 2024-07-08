@@ -6,4 +6,6 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="back_arrow">Back arrow</string>
     <string name="main_header_title">My profile</string>
+
+
 </resources>

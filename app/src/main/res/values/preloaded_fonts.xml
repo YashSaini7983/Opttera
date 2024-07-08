@@ -162,5 +162,61 @@
         <item name="android:textColor">@color/blue</item>
     </style>
 
+    <style name="history">
+        <item name="fontFamily">@font/poppins_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/Spinner</item>
+    </style>
+
+    <style name="history1">
+        <item name="fontFamily">@font/poppins</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/grey2</item>
+    </style>
+
+    <style name="batteryConsumption">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/green</item>
+    </style>
+
+    <style name="tab">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:textColor">@color/black1</item>
+    </style>
+
+    <style name="tab_text">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/grey3</item>
+    </style>
+
+    <style name="CostEstimation">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/grey4</item>
+    </style>
+
+
+    <style name="CostEstimation1">
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/grey5</item>
+    </style>
+
+
+    <style name="carTrip">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black1</item>
+    </style>
+
+    <style name="carTripDetail">
+        <item name="fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/grey2</item>
+    </style>
+
 
 </resources>

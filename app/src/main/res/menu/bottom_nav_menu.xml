@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/bottom_search"
+        android:title="Search"
+        android:icon="@drawable/search_logo1"/>
+
+    <item
+        android:id="@+id/bottom_planTrip"
+        android:title="Plan Trip"
+        android:icon="@drawable/plantrip_logo" />
+
+
+    <item
+        android:id="@+id/bottom_range"
+        android:title="Range"
+         android:icon="@drawable/range_logo"/>
+
+
+    <item
+        android:id="@+id/bottom_history"
+        android:title="History"
+        android:icon="@drawable/history_logo"/>
+
+
+
+
+
+
+</menu>

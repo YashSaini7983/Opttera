@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="4dp"
+        android:background="@drawable/custom_edit_box"
+        app:cardElevation="0dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_margin="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.067">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp">
+
+
+
+
+            <ImageView
+                android:id="@+id/imgMapIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/carbon_location"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.02"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.49" />
+
+            <LinearLayout
+
+                android:id="@+id/destination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgMapIcon"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="1dp">
+
+
+
+
+                <TextView
+                    android:id="@+id/txtLocationDestination"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Amterdam to Delft"
+                    android:textAppearance="@style/Vechile"
+                    android:lineHeight="21.78dp"/>
+
+
+                <TextView
+                    android:id="@+id/txt_Date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="23/05/2023, 8:30 PM"
+                    android:lineHeight="21dp"
+                    android:textAppearance="@style/history1"
+                    android:padding="5dp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/distance"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/destination"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/arrow"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/txt_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="$545"
+                    android:textAppearance="@style/history"
+                    android:lineHeight="24dp"
+                    android:gravity="center"/>
+
+
+                <TextView
+                    android:id="@+id/txt_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="230 KM"
+                    android:lineHeight="21dp"
+                    android:textAppearance="@style/history1"
+                    android:padding="5dp"
+                    android:gravity="center"/>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+
+
+
+
+            <ImageView
+                android:id="@+id/arrow"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                app:layout_constraintStart_toEndOf="@id/distance"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:src="@drawable/baseline_arrow_forward_ios_24"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

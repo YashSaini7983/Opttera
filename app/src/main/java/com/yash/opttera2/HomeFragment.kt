@@ -35,9 +35,7 @@ class HomeFragment : Fragment() {
 
         val toolbar = binding.toolbar
         val drawerLayout = binding.drawerLayout
-        val navigationView = binding.navigationView
-        val headerView = navigationView.getHeaderView(0)
-        val headerTitle = headerView.findViewById<TextView>(R.id.header_title)
+
 
 
 
@@ -57,80 +55,7 @@ class HomeFragment : Fragment() {
         drawerLayout.closeDrawers()
         true
 
-        /**
 
-        headerView.setOnClickListener {
-        headerTitle.text = getString(R.string.main_header_title) // Set to your main header title
-        navigationView.menu.clear()
-        navigationView.inflateMenu(R.menu.nav_menu) // Set to your main menu resource
-        }
-
-
-
-        navigationView.setNavigationItemSelectedListener {
-        menuItem ->
-        // Handle navigation view item clicks here.
-        when (menuItem.itemId) {
-        R.id.nav_myAccount -> {
-        // Replace the header with "My Account"
-        headerTitle.text = "My Account"
-        navigationView.menu.clear()
-        navigationView.inflateMenu(R.menu.nav_menu_myaccount)
-        true
-        }
-        R.id.nav_personaldetail -> {
-        // Replace the current fragment with the PersonalDetail fragment
-        val personalDetailFragment = PersonalDetail()
-        requireActivity().supportFragmentManager.beginTransaction()
-        .replace(R.id.fragment_container, personalDetailFragment)
-        .addToBackStack(null)
-        .commit()
-        true
-
-        }
-        R.id.nav_referral->
-        {
-        val referralFragment  = Refrealfragment()
-        requireActivity().supportFragmentManager.beginTransaction()
-        .replace(R.id.fragment_container, referralFragment)
-        .addToBackStack(null)
-        .commit()
-        true
-
-        }
-        R.id.nav_loyaltyCards->
-        {
-        val loyaltyCardFragment  = LoyaltyCard()
-        requireActivity().supportFragmentManager.beginTransaction()
-        .replace(R.id.fragment_container, loyaltyCardFragment)
-        .addToBackStack(null)
-        .commit()
-        true
-        }
-
-        R.id.nav_HelpCentre -> {
-        // Handle Help Centre click
-        drawerLayout.closeDrawer(GravityCompat.START)
-        true
-        }
-
-        R.id.privacyPolicy -> {
-        // Handle Privacy Policy click
-        drawerLayout.closeDrawer(GravityCompat.START)
-        true
-        }
-
-        R.id.nav_logout -> {
-        // Handle Log Out click
-        drawerLayout.closeDrawer(GravityCompat.START)
-        true
-        }
-
-        else -> false
-        }
-        }
-
-         **/
 
         toolbar.setNavigationOnClickListener {
             val profileFragment = ProfileFragment()
@@ -139,6 +64,8 @@ class HomeFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
+
+
 
 
     }

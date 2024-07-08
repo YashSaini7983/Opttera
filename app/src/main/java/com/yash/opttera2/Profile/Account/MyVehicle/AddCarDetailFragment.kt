@@ -26,7 +26,7 @@ class AddCarDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-
+/**
         binding.addCardHeader.setOnClickListener {
             val myVehicle = MyVehicle()
             requireActivity().supportFragmentManager.beginTransaction()
@@ -34,7 +34,7 @@ class AddCarDetailFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-
+**/
     }
 
 }

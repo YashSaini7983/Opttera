@@ -1,4 +1,4 @@
-package com.yash.opttera2
+package com.yash.opttera2.SignUp
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.navigation.fragment.findNavController
+import com.yash.opttera2.R
 import com.yash.opttera2.databinding.FragmentLogInVechileDetailBinding
 
 class LogInVechileDetailFragment : Fragment() {
