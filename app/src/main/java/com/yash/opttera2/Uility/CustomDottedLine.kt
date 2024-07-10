@@ -15,7 +15,7 @@ class CustomDottedLine (context: Context, attrs: AttributeSet) : View(context, a
     private val dotRadius = 5f // Radius of the dots
     private val dotSpacing = 20f // Space between the dots
 
-     fun onDraw(canvas: Canvas?) {
+    override fun onDraw(canvas: Canvas) {
         if (canvas != null) {
             super.onDraw(canvas)
         }

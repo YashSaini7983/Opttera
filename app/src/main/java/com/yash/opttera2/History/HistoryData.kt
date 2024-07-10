@@ -5,7 +5,8 @@ data class HistoryData(
     val distance : String,
     val amount : String ,
     val location : String ,
-    val dateTime : String
+    val dateTime : String ,
+    val image : Int
 
 
 

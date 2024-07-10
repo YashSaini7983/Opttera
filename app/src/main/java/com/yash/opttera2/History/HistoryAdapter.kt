@@ -1,8 +1,10 @@
 package com.yash.opttera2.History
 
+import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.yash.opttera2.Profile.Account.MyVehicle.CarData
@@ -17,8 +19,8 @@ class HistoryAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HistoryViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.myvehicle_card_item, parent, false)
-        return HistoryAdapter.HistoryViewHolder(view)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.history_item_list, parent, false)
+        return HistoryViewHolder(view)
     }
 
     override fun getItemCount(): Int {
@@ -31,6 +33,7 @@ class HistoryAdapter(
         holder.amount.text = history.amount
         holder.distance.text = history.distance
         holder.dateTime.text = history.dateTime
+        holder.mapImage.setImageResource(history.image)
 
 
         holder.itemView.setOnClickListener {
@@ -45,6 +48,7 @@ class HistoryAdapter(
         val dateTime = itemView.findViewById<TextView>(R.id.txt_Date)
         val amount = itemView.findViewById<TextView>(R.id.txt_amount)
         val distance = itemView.findViewById<TextView>(R.id.txt_distance)
+        val mapImage = itemView.findViewById<ImageView>(R.id.imgMapIcon)
     }
 
 

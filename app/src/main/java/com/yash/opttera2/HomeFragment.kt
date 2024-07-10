@@ -8,6 +8,11 @@ import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.findViewTreeViewModelStoreOwner
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.yash.opttera2.Profile.ProfileFragment
 import com.yash.opttera2.databinding.FragmentHomeBinding
@@ -35,14 +40,6 @@ class HomeFragment : Fragment() {
 
         val toolbar = binding.toolbar
         val drawerLayout = binding.drawerLayout
-
-
-
-
-
-
-
-
         (activity as? AppCompatActivity)?.let {
             it.setSupportActionBar(toolbar)
             val toggle = ActionBarDrawerToggle(
@@ -64,7 +61,8 @@ class HomeFragment : Fragment() {
                 .addToBackStack(null)
                 .commit()
         }
-
+          val navHostFragment = childFragmentManager.findFragmentById(R.id.home_navHost) as NavHostFragment
+          binding.bottomNavigation.setupWithNavController(navHostFragment.navController)
 
 
 

@@ -52,118 +52,698 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/carTripDetail"
+    <ScrollView
+        android:id="@id/scrollView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:cardBackgroundColor="@color/white"
-        app:cardCornerRadius="4dp"
-        android:background="@drawable/custom_edit_box"
-        app:cardElevation="0dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        android:layout_margin="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/detail"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/historyTripDetailView"
-        app:layout_constraintVertical_bias="0.067">
+        app:layout_constraintTop_toBottomOf="@+id/historyTripDetailView">
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/scrollConstraint"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="20dp">
+            android:layout_height="match_parent">
 
 
-            <ImageView
-                android:id="@+id/imgCar"
-                android:layout_width="99dp"
-                android:layout_height="60dp"
-                android:src="@drawable/bmw"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.02"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carTripDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/custom_edit_box"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.49" />
+                app:layout_constraintTop_toBottomOf="@id/scrollView"
+                app:layout_constraintVertical_bias="0.067">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp">
+
+
+                    <ImageView
+                        android:id="@+id/imgCar"
+                        android:layout_width="99dp"
+                        android:layout_height="60dp"
+                        android:src="@drawable/bmw"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintHorizontal_bias="0.02"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.49" />
+
+                    <LinearLayout
+                        android:id="@+id/carInformation"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="25dp"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imgCar"
+                        app:layout_constraintTop_toTopOf="parent">
+
+                        <TextView
+                            android:id="@+id/txtCarName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineHeight="21.78dp"
+                            android:padding="10dp"
+                            android:text="BMW"
+                            android:textAppearance="@style/Vechile" />
+
+
+                        <TextView
+                            android:id="@+id/txtCarDetail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:lineHeight="15dp"
+                            android:padding="5dp"
+                            android:text="i3s 94 Ah (2017 - 2018)"
+                            android:textAppearance="@style/Vechile1" />
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
 
             <LinearLayout
-                android:id="@+id/carInformation"
+                android:id="@+id/batteryConsumption"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/imgCar"
-                app:layout_constraintTop_toTopOf="parent"
-                android:layout_marginLeft="25dp">
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="16dp"
+                android:gravity="start|center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/carTripDetail">
 
                 <TextView
-                    android:id="@+id/txtCarName"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:padding="10dp"
-                    android:text="BMW"
-                    android:textAppearance="@style/Vechile"
-                    android:lineHeight="21.78dp"/>
 
+                    android:lineHeight="21dp"
+                    android:text="Battery Consumption :"
+                    android:textAppearance="@style/fonts" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/battery_medium" />
 
                 <TextView
-                    android:id="@+id/txtCarDetail"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="i3s 94 Ah (2017 - 2018)"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="start"
                     android:lineHeight="15dp"
-                    android:textAppearance="@style/Vechile1"
-                    android:padding="5dp"/>
+                    android:text="15kWh"
+                    android:textAppearance="@style/batteryConsumption" />
             </LinearLayout>
+
+            <!-- Add your custom TabLayout here -->
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/batteryConsumption"
+                app:tabIndicatorColor="@color/white"
+                app:tabSelectedTextColor="@color/black"
+                app:tabTextColor="@color/black">
+
+                <com.google.android.material.tabs.TabItem
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab 1" />
+
+                <com.google.android.material.tabs.TabItem
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab 2" />
+
+                <com.google.android.material.tabs.TabItem
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tab 3" />
+            </com.google.android.material.tabs.TabLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardTab"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/custom_edit_box"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tabLayout"
+                app:layout_constraintVertical_bias="0.067">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <TextView
+                        android:id="@+id/txt_Amsterdam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineHeight="17dp"
+                        android:text="To Amsterdam, Netherlands"
+                        android:textAppearance="@style/tab"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.009" />
+
+
+                    <TextView
+                        android:id="@+id/txt_Arrive"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:lineHeight="17dp"
+                        android:text="30 m • 0 stops • Arrive at 16:43"
+                        android:textAppearance="@style/tab_text"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_Amsterdam" />
+
+                    <TextView
+                        android:id="@+id/txt_blueGeneral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:lineHeight="20dp"
+                        android:text="General"
+                        android:textAppearance="@style/carDetail"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_Arrive" />
+
+
+                    <LinearLayout
+                        android:id="@+id/txt_CostEstimation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_blueGeneral">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:lineHeight="17dp"
+                            android:text="Cost Estimation"
+                            android:textAppearance="@style/CostEstimation" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:lineHeight="17dp"
+                            android:text="$ 677"
+                            android:textAppearance="@style/CostEstimation1" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/txt_TotalConsumption"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_CostEstimation">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:lineHeight="17dp"
+                            android:text="Total Consumption"
+                            android:textAppearance="@style/CostEstimation" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:lineHeight="17dp"
+                            android:text="211 km"
+                            android:textAppearance="@style/CostEstimation1" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/txt_CO"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_TotalConsumption">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:lineHeight="17dp"
+                            android:text="CO2 Spared"
+                            android:textAppearance="@style/CostEstimation" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start"
+                            android:lineHeight="17dp"
+                            android:text="37.8 kWh"
+                            android:textAppearance="@style/CostEstimation1" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:id="@+id/txtCarPlace"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txt_CO">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cartrip_logo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="Amsterdam, Netherlands"
+                                android:textAppearance="@style/carTrip" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="19 degree C | Range at start: 99%"
+                                android:textAppearance="@style/carTripDetail" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/dottedLine"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/txtCarPlace" />
+
+
+                    <LinearLayout
+                        android:id="@+id/PlazaCharging"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dottedLine">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cartrip_logo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="Coast Plaza Charging"
+                                android:textAppearance="@style/carTrip" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="3003 Ave NE | EVSE Ports - 2"
+                                android:textAppearance="@style/carTripDetail" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/dottedLine1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/PlazaCharging" />
+
+
+                    <LinearLayout
+                        android:id="@+id/Lounge"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dottedLine1">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cartrip_logo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="Imperfecto Lounge"
+                                android:textAppearance="@style/carTrip" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="121 Midway Row NE"
+                                android:textAppearance="@style/carTripDetail" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/dottedLine2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/Lounge" />
+
+                    <LinearLayout
+                        android:id="@+id/AVE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dottedLine2">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cartrip_logo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="FIFTH AVE VW"
+                                android:textAppearance="@style/carTrip" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="1120 Meridian Rd NE| EVSE Ports - 2"
+                                android:textAppearance="@style/carTripDetail" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/dottedLine3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/AVE" />
+
+                    <LinearLayout
+                        android:id="@+id/Cafe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dottedLine3">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cartrip_logo" />
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="Cafe Coffee Day"
+                                android:textAppearance="@style/carTrip" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="154 Brightway Road"
+                                android:textAppearance="@style/carTripDetail" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/dottedLine4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/Cafe" />
+
+                    <LinearLayout
+                        android:id="@+id/GasonicCharging"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dottedLine4">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cartrip_logo" />
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="Gasonic Charging"
+                                android:textAppearance="@style/carTrip" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="1120 Meridian Rd NE |EVSE Ports - 3"
+                                android:textAppearance="@style/carTripDetail" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/dottedLine5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/GasonicCharging" />
+
+                    <LinearLayout
+                        android:id="@+id/midwayDinning"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dottedLine5">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cartrip_logo" />
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="Midway Dinning"
+                                android:textAppearance="@style/carTrip" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="121 Coastal Row NE"
+                                android:textAppearance="@style/carTripDetail" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                    <ImageView
+                        android:id="@+id/dottedLine6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:src="@drawable/view"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/midwayDinning" />
+
+                    <LinearLayout
+                        android:id="@+id/dam"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:orientation="horizontal"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/dottedLine6">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/cartrip_logo" />
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="16dp"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="Dam, Netherlands"
+                                android:textAppearance="@style/carTrip" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:lineHeight="17dp"
+                                android:text="19 degree C| Range at start: 99%"
+                                android:textAppearance="@style/carTripDetail" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+    </ScrollView>
 
 
-    <LinearLayout
-        android:id="@+id/batteryConsumption"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/carTripDetail"
-        app:layout_constraintStart_toStartOf="@+id/carTripDetail"
-        app:layout_constraintEnd_toEndOf="@+id/carTripDetail"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-             android:textAppearance="@style/fonts"
-            android:text="Battery Consumption :"
-            android:layout_weight="1"
-            android:lineHeight="21dp"/>
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/battery_medium"
-             android:layout_gravity="start" />
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:gravity="start"
-            android:text="15kWh"
-            android:lineHeight="15dp"
-            android:textAppearance="@style/batteryConsumption" />
-
-
-
-
-
-
-    </LinearLayout>
 
 
 

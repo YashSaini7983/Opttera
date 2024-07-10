@@ -42,6 +42,8 @@ android {
 dependencies {
 
     val nav_version = "2.7.7"
+    val lifecycle_version = "2.8.3"
+    val arch_version = "2.2.0"
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -70,6 +72,13 @@ dependencies {
     implementation("com.googlecode.libphonenumber:libphonenumber:8.12.34")
     //BarCode
     implementation("com.journeyapps:zxing-android-embedded:4.2.0")
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+
+
 
 
 

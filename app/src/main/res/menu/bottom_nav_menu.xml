@@ -2,24 +2,24 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/bottom_search"
+        android:id="@+id/searchFragment"
         android:title="Search"
         android:icon="@drawable/search_logo1"/>
 
     <item
-        android:id="@+id/bottom_planTrip"
+        android:id="@+id/planTripFragment"
         android:title="Plan Trip"
         android:icon="@drawable/plantrip_logo" />
 
 
     <item
-        android:id="@+id/bottom_range"
+        android:id="@+id/rangeFragment"
         android:title="Range"
          android:icon="@drawable/range_logo"/>
 
 
     <item
-        android:id="@+id/bottom_history"
+        android:id="@+id/historyFragment"
         android:title="History"
         android:icon="@drawable/history_logo"/>
 
