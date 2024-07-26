@@ -37,9 +37,9 @@ class MyVehicleAdapter(
     }
 
     class MyVehicleViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val carImage = itemView.findViewById<ImageView>(R.id.imgCar)
-        val carName = itemView.findViewById<TextView>(R.id.txtCarName)
-        val carDetail = itemView.findViewById<TextView>(R.id.txtCarDetail)
+        val carImage = itemView.findViewById<ImageView>(R.id.imgCar1)
+        val carName = itemView.findViewById<TextView>(R.id.txtCarName1)
+        val carDetail = itemView.findViewById<TextView>(R.id.txtCarDetail1)
     }
 
 }

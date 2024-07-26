@@ -27,6 +27,13 @@
     <color name="grey3">#828282</color>
     <color name="grey4">#333333</color>
     <color name="grey5">#4F4F4F</color>
+    <color name="tab_background">#EEEEF0</color>
+    <color name="search_vew">#D6D6D6</color>
+    <color name="location">#797979</color>
+    <color name="EditBox">#D6D6D6</color>
+    <color name="cardView">#ECF5FF</color>
+    <color name="red">#f44336</color>
+
 
 
 

@@ -151,7 +151,6 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
                     android:lineHeight="21dp"
                     android:text="Battery Consumption :"
                     android:textAppearance="@style/fonts" />
@@ -185,25 +184,28 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/batteryConsumption"
                 app:tabIndicatorColor="@color/white"
-                app:tabSelectedTextColor="@color/black"
+                app:tabBackground="@drawable/custom_tab_background"
                 app:tabTextColor="@color/black">
 
                 <com.google.android.material.tabs.TabItem
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="5dp"
                     android:text="Tab 1" />
 
                 <com.google.android.material.tabs.TabItem
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="5dp"
                     android:text="Tab 2" />
 
                 <com.google.android.material.tabs.TabItem
 
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:padding="5dp"
                     android:text="Tab 3" />
             </com.google.android.material.tabs.TabLayout>
 

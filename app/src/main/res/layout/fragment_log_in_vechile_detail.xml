@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".SignUp.LogInVechileDetailFragment">
-
+    tools:context=".signup.ui.LogInVechileDetailFragment">
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/txt_SignUpVechile"
@@ -53,7 +52,6 @@
         app:layout_constraintVertical_bias="0.095"
         android:orientation="vertical">
 
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -69,7 +67,6 @@
             android:lineHeight="17dp" />
     </LinearLayout>
 
-
     <LinearLayout
         android:id="@+id/spinner_item"
         android:layout_width="match_parent"
@@ -83,19 +80,37 @@
         app:layout_constraintTop_toBottomOf="@+id/heading"
         app:layout_constraintBottom_toTopOf="@+id/img_selectedImage">
 
+       <EditText
+           android:id="@+id/searchBrand"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:hint="Select the Vehicle Brand"
+           android:textColor="@color/black"
+           android:paddingStart="10dp"
+           android:paddingEnd="10dp"
+           android:paddingBottom="10dp"
+           android:maxLines="1"/>
 
-        <Spinner
-            android:id="@+id/spinner_vehicle_brand"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/brandRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:visibility="invisible"/>
+        <EditText
+            android:id="@+id/searchModel"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="10dp"/>
+            android:hint="Select the Vehicle Model"
+            android:textColor="@color/black"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingBottom="10dp"
+            android:maxLines="1"/>
 
-
-        <Spinner
-            android:id="@+id/spinner_vehicle_model"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/modelVersionRecyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"/>
+            android:layout_height="55dp"/>
     </LinearLayout>
 
    <ImageView
@@ -185,7 +200,5 @@
         android:text="I”ll do later"
         android:gravity="center"
         android:textAppearance="@style/doItLater"/>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,6 +16,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
 import com.yash.opttera2.Profile.ProfileFragment
 import com.yash.opttera2.databinding.FragmentHomeBinding
+//import com.mapbox.maps.MapView;
 
 
 class HomeFragment : Fragment() {
@@ -65,6 +66,18 @@ class HomeFragment : Fragment() {
           binding.bottomNavigation.setupWithNavController(navHostFragment.navController)
 
 
+
+//        mapView = MapView(this)
+//        mapView.mapboxMap.setCamera(
+//            CameraOptions.Builder()
+//                .center(Point.fromLngLat(-98.0, 39.5))
+//                .pitch(0.0)
+//                .zoom(2.0)
+//                .bearing(0.0)
+//                .build()
+//        )
+//        // Add the map view to the activity (you can also add it to other views as a child)
+//        setContentView(mapView)
 
     }
 

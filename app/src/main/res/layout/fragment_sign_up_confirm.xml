@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SignUp.SignUpConfirm"
     android:background="@color/white"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    tools:context=".signup.ui.SignUpConfirm">
 
 
     <com.google.android.material.textview.MaterialTextView
@@ -65,57 +65,78 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.294" />
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edt_SignUp_Password"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:drawableEnd="@drawable/eye"
-        android:hint="Password*"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
-        android:inputType="text"
         android:textColor="@color/black"
-        android:textColorHint="@color/grey"
-        app:boxStrokeColor = "@color/grey"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.371" />
+        app:layout_constraintVertical_bias="0.371"
+        app:endIconMode="password_toggle"
+        app:boxStrokeWidth="1dp"
+        app:boxStrokeColor="@color/grey"
+        app:boxBackgroundMode="outline">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_SignUp_Password1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password*"
+            android:textColor="@color/black"
+            android:inputType="text"
+            android:background="@null"
+            android:textColorHint="@color/grey"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-
-
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/edt_SignUp_ConfirmPassword"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="ConfirmPassword*"
-        android:drawableEnd="@drawable/eye"
-        android:inputType="text|textEmailAddress"
-        android:textColor="@color/black"
-        android:textColorHint="@color/grey"
-        app:boxStrokeColor = "@color/grey"
-        android:textSize="16sp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/grey"
+        app:boxStrokeWidth="1dp"
+        app:endIconMode="password_toggle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.291"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47" />
+        app:layout_constraintVertical_bias="0.462">
 
+                <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/edt_SignUp_ConfirmPassword1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:hint="Confirm Password*"
+                    android:textColor="@color/black"
+                    android:inputType="text"
+                    android:textColorHint="@color/grey"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="385dp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_signUpConfirm"
         android:layout_width="273dp"
         android:layout_height="56dp"
-        android:backgroundTint="@color/blue"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:backgroundTint="@color/blue"
         android:text="SignUP"
         android:textColor="@color/white"
         android:textSize="16sp"
@@ -241,6 +262,8 @@
 
 
     </androidx.cardview.widget.CardView>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -74,7 +74,6 @@
             android:id="@+id/edt_LogIn_Email_Phone"
             android:layout_width="match_parent"
             android:layout_height="50dp"
-
             android:hint="Enter Email/Phone *"
             android:inputType="text"
             android:paddingLeft="10dp"

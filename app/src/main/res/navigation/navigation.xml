@@ -40,7 +40,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUp"
-        android:name="com.yash.opttera2.SignUp.SignUp"
+        android:name="com.yash.opttera2.signup.ui.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/signUpConfirm"
-        android:name="com.yash.opttera2.SignUp.SignUpConfirm"
+        android:name="com.yash.opttera2.signup.ui.SignUpConfirm"
         android:label="fragment_sign_up_confirm"
         tools:layout="@layout/fragment_sign_up_confirm" >
 
@@ -112,7 +112,7 @@
         tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/logInVechileDetailFragment"
-        android:name="com.yash.opttera2.SignUp.LogInVechileDetailFragment"
+        android:name="com.yash.opttera2.signup.ui.LogInVechileDetailFragment"
         android:label="fragment_log_in_vechile_detail"
         tools:layout="@layout/fragment_log_in_vechile_detail" >
         <action

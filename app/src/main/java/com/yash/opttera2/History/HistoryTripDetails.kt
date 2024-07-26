@@ -38,6 +38,16 @@ class HistoryTripDetails : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+
+//        for (i in 0 until binding.tabLayout.tabCount) {
+//            val tab = binding.tabLayout.getTabAt(i)
+//            if (tab != null) {
+//                val customTabView = LayoutInflater.from(requireContext()).inflate(R.layout.custom_tab_layout, null)
+//                tab.customView = customTabView
+//            }
+//        }
+
+
         // Observe the state flow and update the UI accordingly
 
        viewLifecycleOwner.lifecycleScope.launch {
@@ -50,11 +60,6 @@ class HistoryTripDetails : Fragment() {
            }
 
        }
-
-
-
-
-
         binding.tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 when (tab?.position) {
@@ -73,7 +78,10 @@ class HistoryTripDetails : Fragment() {
                 }
             }
 
-            override fun onTabUnselected(tab: TabLayout.Tab?) {}
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+
+
+            }
             override fun onTabReselected(tab: TabLayout.Tab?) {}
         })
     }

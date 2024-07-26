@@ -284,9 +284,7 @@
                 android:layout_height="36dp"
                 android:drawableEnd="@drawable/telegram_logo"
                 android:ems="10"
-
                 android:paddingLeft="16dp"
-
                 android:layout_marginTop="16dp"
                 android:layout_marginBottom="15dp"
                 android:hint="Email Address "

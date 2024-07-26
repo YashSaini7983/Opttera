@@ -21,7 +21,8 @@ import com.yash.opttera2.databinding.FragmentLogINBinding
 
 class LogIN : Fragment() {
 
-    private lateinit var binding : FragmentLogINBinding
+    private var _binding : FragmentLogINBinding? = null
+    private val binding get() = _binding!!
     private var isPasswordVisible = false // Initialize the variable here
 
 
@@ -31,7 +32,7 @@ class LogIN : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
 
-        binding = FragmentLogINBinding.inflate(inflater,container,false)
+        _binding = FragmentLogINBinding.inflate(inflater,container,false)
         return binding.root
 
     }
@@ -107,15 +108,11 @@ class LogIN : Fragment() {
             if (password.isEmpty()) {
                 Toast.makeText(requireContext(), "Enter the Password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
-            } else {
+            }
+            else {
                      findNavController().navigate(R.id.action_logIN_to_homeFragment)
             }
-
-
-
         }
-
-
 
         binding.edtLogInPassword.setOnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_UP) {
@@ -142,9 +139,6 @@ class LogIN : Fragment() {
             }
             false
         }
-
-
-
     }
 
 

@@ -10,6 +10,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.yash.opttera2.HomeFragment
 import com.yash.opttera2.Profile.Account.MyAccountFragment
 import com.yash.opttera2.R
@@ -35,6 +36,9 @@ class ProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val bottomNavigationView = requireActivity().findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNavigationView.visibility = View.GONE
 
 
 
@@ -69,6 +73,11 @@ class ProfileFragment : Fragment() {
                 .commit()
         }
 
+        requireActivity().supportFragmentManager.addOnBackStackChangedListener {
+            if (requireActivity().supportFragmentManager.backStackEntryCount == 0) {
+                bottomNavigationView.visibility = View.VISIBLE
+            }
+        }
 
 
 
